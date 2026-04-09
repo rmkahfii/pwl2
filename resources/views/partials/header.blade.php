@@ -13,6 +13,7 @@
               <a href="/artikel"class="{{ request()->is('artikel') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition hover:scale-105">Artikel</a>
               <a href="/contact"class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition hover:scale-105">Contact</a>
               <a href="/report"class="{{ request()->is('report') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition hover:scale-105">Reports</a>
+              <a href="/profile">Profile</a>
             </div>
           </div>
         </div>

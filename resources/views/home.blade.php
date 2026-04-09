@@ -105,6 +105,7 @@
             </tbody>
         </table>
     </x-card>
+    <x-footer />
 
 </div>
 </main>
