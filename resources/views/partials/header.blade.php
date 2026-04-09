@@ -8,11 +8,11 @@
           <div class="hidden md:block">
             <div class="ml-10 flex items-baseline space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-              <a href="/"class="{{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium">Home</a>
-              <a href="/about"class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium">About</a>
-              <a href="/artikel"class="{{ request()->is('artikel') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium">Artikel</a>
-              <a href="/contact"class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-              <a href="/report"class="{{ request()->is('report') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium">Reports</a>
+              <a href="/"class="{{ request()->is('/') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition hover:scale-105">Home</a>
+              <a href="/about"class="{{ request()->is('about') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition hover:scale-105">About</a>
+              <a href="/artikel"class="{{ request()->is('artikel') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition hover:scale-105">Artikel</a>
+              <a href="/contact"class="{{ request()->is('contact') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition hover:scale-105">Contact</a>
+              <a href="/report"class="{{ request()->is('report') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-white/5 hover:text-white' }} px-3 py-2 rounded-md text-sm font-medium transition hover:scale-105">Reports</a>
             </div>
           </div>
         </div>
