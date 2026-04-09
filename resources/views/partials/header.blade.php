@@ -25,7 +25,9 @@
           <a href="/contact" class="block px-4 py-2 rounded hover:bg-gray-700">
             Log Out
           </a>
-
+          <a href="/activity" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-700">
+            Activity
+          </a>
 
 
         </div>
