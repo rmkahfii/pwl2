@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    return view('dashboard'); // Kita paksa halaman utama nampilin file dashboard kamu
 });
 
 Route::get('/about', function () {
@@ -28,4 +28,8 @@ Route::get('/report', function () {
 
 Route::get('/list-data', function() {
     return view('list-data');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
 });
