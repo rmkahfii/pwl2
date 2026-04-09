@@ -22,3 +22,7 @@ Route::get('/contact', function () {
 Route::get('/report', function () {
     return view('report');
 });
+
+Route::get('/list-data', function() {
+    return view('list-data');
+});
