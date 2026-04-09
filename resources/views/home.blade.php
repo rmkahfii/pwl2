@@ -27,7 +27,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         <x-card>
             <p class="text-sm text-gray-500">Total User</p>
-            <h2 class="text-2xl font-bold">120</h2>
+            <h2 class="text-2xl font-bold">{{ $totalUser }}</h2>
         </x-card>
 
         <x-card>
@@ -84,18 +84,24 @@
             </thead>
 
             <tbody>
-                @for($i = 1; $i <= 5; $i++)
+                @forelse($users as $user)
                 <tr class="border-b">
-                    <td class="p-3">{{ $i }}</td>
-                    <td class="p-3">User {{ $i }}</td>
-                    <td class="p-3">Report</td>
+                    <td class="p-3">{{ $loop->iteration }}</td>
+                    <td class="p-3">{{ $user->name }}</td>
+                    <td class="p-3">User</td>
                     <td class="p-3">
                         <span class="px-2 py-1 text-xs bg-green-100 text-green-600 rounded">
-                            Done
+                            Active
                         </span>
                     </td>
                 </tr>
-                @endfor
+                @empty
+                <tr>
+                    <td colspan="4" class="text-center p-4 text-gray-500">
+                        No data available
+                    </td>
+                </tr>
+                @endforelse
             </tbody>
         </table>
     </x-card>
