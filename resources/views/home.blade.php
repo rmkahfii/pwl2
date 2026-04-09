@@ -28,10 +28,79 @@
     </div>
   </header>
   <main>
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <!-- Your content -->
+<div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 space-y-6">
+
+    <!-- 🔹 STATISTIC CARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-white p-5 rounded-xl shadow">
+            <p class="text-sm text-gray-500">Total User</p>
+            <h2 class="text-2xl font-bold">120</h2>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow">
+            <p class="text-sm text-gray-500">Artikel</p>
+            <h2 class="text-2xl font-bold">45</h2>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow">
+            <p class="text-sm text-gray-500">Reports</p>
+            <h2 class="text-2xl font-bold">18</h2>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow">
+            <p class="text-sm text-gray-500">Contact</p>
+            <h2 class="text-2xl font-bold">12</h2>
+        </div>
     </div>
-  </main>
+
+    <!-- 🔹 SOCIAL CARDS -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-blue-600 text-white p-5 rounded-xl shadow">
+            <h2 class="font-semibold">Facebook</h2>
+            <p class="text-sm mt-2">35K Followers</p>
+        </div>
+        <div class="bg-sky-500 text-white p-5 rounded-xl shadow">
+            <h2 class="font-semibold">Twitter</h2>
+            <p class="text-sm mt-2">58K Followers</p>
+        </div>
+        <div class="bg-blue-800 text-white p-5 rounded-xl shadow">
+            <h2 class="font-semibold">LinkedIn</h2>
+            <p class="text-sm mt-2">75K Connections</p>
+        </div>
+        <div class="bg-red-500 text-white p-5 rounded-xl shadow">
+            <h2 class="font-semibold">Google</h2>
+            <p class="text-sm mt-2">450 Users</p>
+        </div>
+    </div>
+
+    <!-- 🔹 TABLE REPORT -->
+    <div class="bg-white p-6 rounded-xl shadow">
+        <h2 class="font-semibold mb-4">Latest Reports</h2>
+        <table class="w-full text-sm text-left">
+            <thead class="bg-gray-100 text-gray-600">
+                <tr>
+                    <th class="p-3">No</th>
+                    <th class="p-3">Name</th>
+                    <th class="p-3">Type</th>
+                    <th class="p-3">Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for($i = 1; $i <= 5; $i++)
+                <tr class="border-b">
+                    <td class="p-3">{{ $i }}</td>
+                    <td class="p-3">User {{ $i }}</td>
+                    <td class="p-3">Report</td>
+                    <td class="p-3">
+                        <span class="px-2 py-1 text-xs bg-green-100 text-green-600 rounded">
+                            Done
+                        </span>
+                    </td>
+                </tr>
+                @endfor
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</main>
 </div>
 
 </body>
