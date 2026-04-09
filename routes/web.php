@@ -1,9 +1,14 @@
 <?php
-
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('home');
+    $users = User::all();
+
+    return view('home', [
+        'users' => $users,
+        'totalUser' => $users->count()
+    ]);
 });
 
 Route::get('/about', function () {

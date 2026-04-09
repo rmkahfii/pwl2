@@ -3,40 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      @vite('resources/css/app.css')
-      <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-      <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <title>Halaman Home</title>
 </head>
+
 <body class="h-full">
-<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
-<!--
-  This example requires updating your template:
-
-  ```
-  <html class="h-full bg-gray-100">
-  <body class="h-full">
-  ```
--->
 <div class="min-h-full">
-  
-@include('partials.header')
-  <header class="relative bg-white shadow-sm">
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-<<<<<<< Updated upstream
-      <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
-=======
-        <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
->>>>>>> Stashed changes
-    </div>
-  </header>
-  <main>
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-      <!-- Your content -->
-    </div>
-  </main>
-</div>
 
+@include('partials.header')
+
+<header class="bg-white shadow-sm">
+    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
+    </div>
+</header>
+
+<main>
+<div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 space-y-6">
+
+    <!-- 🔹 STATISTIC CARDS -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <x-card>
+            <p class="text-sm text-gray-500">Total User</p>
+            <h2 class="text-2xl font-bold">{{ $totalUser }}</h2>
+        </x-card>
+
+        <x-card>
+            <p class="text-sm text-gray-500">Artikel</p>
+            <h2 class="text-2xl font-bold">45</h2>
+        </x-card>
+
+        <x-card>
+            <p class="text-sm text-gray-500">Reports</p>
+            <h2 class="text-2xl font-bold">18</h2>
+        </x-card>
+
+        <x-card>
+            <p class="text-sm text-gray-500">Contact</p>
+            <h2 class="text-2xl font-bold">12</h2>
+        </x-card>
+
+    </div>
+
+    <!-- 🔹 TABLE USERS -->
+    <x-card>
+        <h2 class="font-semibold mb-4">User Data</h2>
+
+        <table class="w-full text-sm text-left">
+            <thead class="bg-gray-100 text-gray-600">
+                <tr>
+                    <th class="p-3">No</th>
+                    <th class="p-3">Name</th>
+                    <th class="p-3">Type</th>
+                    <th class="p-3">Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach($users as $user)
+                <tr class="border-b">
+                    <td class="p-3">{{ $loop->iteration }}</td>
+                    <td class="p-3">{{ $user->name }}</td>
+                    <td class="p-3">User</td>
+                    <td class="p-3">
+                        <span class="px-2 py-1 text-xs bg-green-100 text-green-600 rounded">
+                            Active
+                        </span>
+                    </td>
+                </tr>
+                @endforeach
+            </tbody>
+
+            <td>{{ $user->email }}</td>
+        </table>
+    </x-card>
+
+</div>
+</main>
+
+</div>
 </body>
 </html>
