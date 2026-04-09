@@ -1,9 +1,18 @@
 <?php
-
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('dashboard'); // Kita paksa halaman utama nampilin file dashboard kamu
+feature-statistik
+    return view('dashboard'); 
+
+    $users = User::all();
+
+    return view('home', [
+        'users' => $users,
+        'totalUser' => $users->count()
+    ]);
+master
 });
 
 Route::get('/about', function () {
