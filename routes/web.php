@@ -10,6 +10,9 @@ Route::get('/about', function () {
     return view('about');
 });
 
+Route::get('/activity', function () {
+    return view('activity');
+});
 
 Route::get('/artikel', function () {
     return view('artikel');
