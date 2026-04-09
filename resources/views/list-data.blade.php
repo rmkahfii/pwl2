@@ -1,4 +1,4 @@
-@include('header')
+
 @include('partials.header')
 <div>
     <!-- An unexamined life is not worth living. - Socrates -->
@@ -27,7 +27,7 @@
                         <tr>
                             <td class="border border-gray-300 px-6 py-4 text-left">2</td>
                             <td class="border border-gray-300 px-6 py-4 text-left">Raden Muhammad Kahfi</td>
-                            <td class="border border-gray-300 px-6 py-4 text-left">5520123041</td>
+                            <td class="border border-gray-300 px-6 py-4 text-left">5520123066</td>
                         </tr>
                         <tr>
                             <td class="border border-gray-300 px-6 py-4 text-left">3</td>
