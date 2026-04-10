@@ -1,5 +1,5 @@
-
 @include('partials.header')
+@include('partials.sidebar')
 <div>
     <!-- An unexamined life is not worth living. - Socrates -->
     <div class="p-6">
@@ -44,4 +44,7 @@
             </div>
         </x-card>
     </div>
+</div>
+
+</div>
 </div>

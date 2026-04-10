@@ -3,42 +3,26 @@ use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-feature-statistik
-    return view('dashboard'); 
-
-    $users = User::all();
-
     return view('home', [
-        'users' => $users,
-        'totalUser' => $users->count()
+        'title' => 'Kelompok 1'
     ]);
-master
-});
-
-Route::get('/about', function () {
-    return view('about');
-});
-
-Route::get('/activity', function () {
-    return view('activity');
-});
-
-Route::get('/artikel', function () {
-    return view('artikel');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
-Route::get('/report', function () {
-    return view('report');
-});
-
-Route::get('/list-data', function() {
-    return view('list-data');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('dashboard', [
+        'title' => 'Dashboard'
+    ]);
 });
+
+Route::get('/activity', function () {
+    return view('activity', [
+        'title' => 'Activity'
+    ]);
+});
+
+Route::get('/list-data', function() {
+    return view('list-data', [
+        'title' => 'List Data'
+    ]);
+});
+
