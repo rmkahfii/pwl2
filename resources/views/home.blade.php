@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-100">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite('resources/css/app.css')
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <title>Halaman Home</title>
-</head>
-
-<body class="h-full">
-<div class="min-h-full">
-
 @include('partials.header')
-
-<header class="bg-white shadow-sm">
-    <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <h1 class="text-3xl font-bold text-gray-900">Dashboard</h1>
-    </div>
-</header>
+@include('partials.sidebar')
 
 <main>
 <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8 space-y-6">
 
     <!-- 🔹 STATISTIC CARDS -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-        
+
         <x-card>
             <p class="text-sm text-gray-500">Total User</p>
-            <h2 class="text-2xl font-bold">{{ $totalUser }}</h2>
+            <h2 class="text-2xl font-bold">4</h2>
         </x-card>
 
         <x-card>
@@ -63,7 +44,7 @@
             </thead>
 
             <tbody>
-                @foreach($users as $user)
+                {{-- @foreach($users as $user)
                 <tr class="border-b">
                     <td class="p-3">{{ $loop->iteration }}</td>
                     <td class="p-3">{{ $user->name }}</td>
@@ -74,10 +55,10 @@
                         </span>
                     </td>
                 </tr>
-                @endforeach
+                @endforeach --}}
             </tbody>
 
-            <td>{{ $user->email }}</td>
+            {{-- <td>{{ $user->email }}</td> --}}
         </table>
     </x-card>
 

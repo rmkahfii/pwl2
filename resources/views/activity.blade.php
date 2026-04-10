@@ -1,16 +1,13 @@
 @include('partials.header')
+@include('partials.sidebar')
 
 <div class="p-6 space-y-6">
-
-    <!-- TITLE -->
-    <h1 class="text-2xl font-bold text-gray-800">Activity</h1>
-
     <!-- 🔹 ACTIVITY CARDS -->
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
 
         <x-card>
             <p class="text-sm text-gray-500">User Aktif</p>
-            <h2 class="text-2xl font-bold">15</h2>
+            <h2 class="text-2xl font-bold">5</h2>
         </x-card>
 
         <x-card>
