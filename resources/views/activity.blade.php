@@ -50,3 +50,5 @@
     </x-card>
 
 </div>
+
+@include('partials.footer')
