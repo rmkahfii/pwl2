@@ -65,6 +65,4 @@
 </div>
 </main>
 
-</div>
-</body>
-</html>
+@include('partials.footer')
